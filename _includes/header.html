@@ -1,1 +1,18 @@
-这是 header
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a href="{{ "/" | relative_url }}">
+      <img class="avatar" src="/assets/img/avatar.png" alt="">
+    </a>
+
+    <div id="navbarSupportedContent">
+      <ul class="navbar-nav ml-lg-auto">
+        {% for page in site.pages %}
+          {% if page.title %}
+            <li class="nav-item active">
+              <a class="nav-link" href={{page.permalink}}>{{ page.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+</nav>
