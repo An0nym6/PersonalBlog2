@@ -1,12 +1,10 @@
-title: 我的 GitHub Pages
+title: Random Thoughts
 email: liuren6@gmail.com
 description: >-
-  这是我的 Github Pages
+  ©️ Designed by shuq3 & An0nym6
 baseurl: ""
 url: ""  # 发布时应更改
 github_username:  An0nym6
-
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
