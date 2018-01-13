@@ -1,15 +1,11 @@
-title: Ferret Blog
+title: 我的 GitHub Pages
 email: liuren6@gmail.com
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  这是我的 Github Pages
 baseurl: ""
 url: ""  # 发布时应更改
-twitter_username: jekyllrb
 github_username:  An0nym6
 
-# Build settings
 markdown: kramdown
 theme: minima
 plugins:
