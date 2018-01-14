@@ -20,11 +20,24 @@ layout: default
     <div class="col-md-4 padding-top">
       <div class="card">
         <div class="card-header">
-          标 签
+          标签
         </div>
         <div class="card-body">
+          {% assign max_tag_count = 0 %}
           {% for tag in site.tags %}
-            {{ tag[0] }}
+            {% if tag[1].size > max_tag_count %}
+              {% assign max_tag_count = tag[1].size %}
+            {% endif %}
+          {% endfor %}
+          {% for i in (1..max_tag_count) reversed %}
+            {% for tag in site.tags %}
+              {% if tag[1].size == i %}
+                <div class="chip">
+                  <span>{{ tag[0] }}</span>
+                  <span class="count" style="background-color: hsl(208, 80%, {{ tag[1].size | times: -18 | divided_by: max_tag_count | plus: 60}}%);">{{ tag[1].size }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
           {% endfor %}
         </div>
       </div>
