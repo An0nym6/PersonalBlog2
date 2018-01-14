@@ -3,8 +3,14 @@
 ---
 
 // 全局
+html {
+  height: 100%;
+}
+
 body {
   color: rgba(0, 0, 0, 0.87);
+  min-height: 100%;
+  position: relative;
 }
 a {
   text-decoration: none !important;
@@ -19,9 +25,9 @@ a {
   height: 48px;
 }
 
-// default
-.main {
+main {
   padding-top: 32px;
+  padding-bottom: 128px;
 }
 
 // home
@@ -37,4 +43,34 @@ a {
 }
 .new-essays {
   margin-top: 32px;
+}
+
+// footer
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 128px;
+
+  .container {
+    height: 100%;
+
+    .divider {
+      border-top: 1px solid #e9ecef;
+      height: 1px;
+    }
+
+    .footer-content {
+      padding-top: 52px;
+
+      .github-info {
+        font-size: 0.9rem;
+
+        .icon-github{
+          vertical-align: middle;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
