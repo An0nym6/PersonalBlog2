@@ -58,6 +58,9 @@ main {
     color: #ffffff;
   }
 }
+.card-title {
+  font-size: 1.5rem;
+}
 .new-essays {
   margin-top: 32px;
 }
@@ -68,21 +71,22 @@ footer {
   bottom: 0;
   width: 100%;
   height: 128px;
-
   .container {
     height: 100%;
-
     .divider {
       border-top: 1px solid #e9ecef;
       height: 1px;
     }
-
     .footer-content {
-      padding-top: 52px;
-
+      padding-top: 48px;
+      .middle {
+        text-align: center;
+      }
+      .right {
+        text-align: right;
+      }
       .github-info {
         font-size: 0.9rem;
-
         .icon-github{
           vertical-align: middle;
           text-decoration: none;
