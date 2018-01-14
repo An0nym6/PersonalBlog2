@@ -2,17 +2,40 @@
 layout: default
 ---
 
-<div>
-  <h1>Posts</h1>
+<div class="container">
   {{ content }}
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <span>{{ post.date }}</span>
-        <h2>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="row">
+    <div class="col-md-8 padding-top">
+      {% for post in site.posts %}
+        <div class="post">
+          <div class="title">{{ post.title }}</div>
+          <div class="date">{{ post.date | date: '%Y 年 %m 月 %d 日' }}</div>
+          <div class="padding-top">{{ post.summary }}</div>
+          <div class="padding-top">
+            <a href="{{ post.url | relative_url }}">阅读全文</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="col-md-4 padding-top">
+      <div class="card">
+        <div class="card-header">
+          标 签
+        </div>
+        <div class="card-body">
+          {% for tag in site.tags %}
+            {{ tag[0] }}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card new-essays">
+        <div class="card-header">
+          最新文章
+        </div>
+        <div class="card-body">
+          这里是最新文章的列表
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

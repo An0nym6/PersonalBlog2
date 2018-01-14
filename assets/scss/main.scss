@@ -2,11 +2,39 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// 全局
 body {
   color: rgba(0, 0, 0, 0.87);
 }
+a {
+  text-decoration: none !important;
+}
+.padding-top {
+  padding-top: 16px;
+}
 
+// header
 .avatar {
   width: 48px;
   height: 48px;
+}
+
+// default
+.main {
+  padding-top: 32px;
+}
+
+// home
+.post {
+  margin-bottom: 48px;
+  .title {
+    font-size: 1.5rem;
+  }
+  .date {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.9rem;
+  }
+}
+.new-essays {
+  margin-top: 32px;
 }
