@@ -6,5 +6,8 @@ baseurl: ""
 url: ""  # 发布时应更改
 github_username:  An0nym6
 markdown: kramdown
+paginate: 1
+paginate_path: "/page:num/"
 plugins:
   - jekyll-feed
+  - jekyll-paginate
