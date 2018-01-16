@@ -84,10 +84,23 @@ footer {
     }
     .footer-content {
       padding-top: 48px;
-      .middle {
+      color: #586069;
+      font-size: 12px;
+
+      .col-middle {
         text-align: center;
+        margin: 0 auto;
+
+        .github-info {
+          font-size: 0.9rem;
+          .icon-github{
+            vertical-align: middle;
+            text-decoration: none;
+          }
+        }
       }
-      .right {
+
+      .col-right {
         text-align: right;
       }
       .icon {

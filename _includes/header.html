@@ -7,20 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav ml-auto">
         {% for page in site.pages %}
-          {% if page.title and page.permalink == "/essay/"%}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                文章
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">最新文章</a>
-                <a class="dropdown-item" href="#">标签</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">全部文章</a>
-              </div>
-            </li>
-          {% endif %}
-          {% if page.title and page.permalink != "/essay/"%}
+          {% if page.title %}
             <li class="nav-item">
               <a class="nav-link" href={{page.permalink}}>{{ page.title }}</a>
             </li>
