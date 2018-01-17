@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+{% assign posts = site.posts %}
+{% if page.posts %}
+  {% assign posts = page.posts %}
+{% endif %}
+
+<div class="page-title">归档</div>
+{% for post in posts %}
+  {{post.title}}
+{% endfor %}

@@ -31,20 +31,7 @@ main {
   padding-bottom: 128px;
 }
 
-// home
-.post {
-  margin-bottom: 48px;
-  .title {
-    font-size: 1.5rem;
-  }
-  .date {
-    color: rgba(0, 0, 0, 0.54);
-    font-size: 0.9rem;
-  }
-}
-.pagination {
-  margin: 0px;
-}
+// page
 .chip {
   line-height: 32px;
   padding-left: 16px;
@@ -53,6 +40,9 @@ main {
   background-color: rgba(0, 0, 0, 0.09);
   display: inline-block;
   margin: 0px 8px 16px 0px;
+  .tag {
+    color: rgba(0, 0, 0, 0.87);
+  }
   .count {
     text-align: center;
     width: 32px;
@@ -67,6 +57,26 @@ main {
 }
 .new-essays {
   margin-top: 32px;
+}
+
+// home
+.post {
+  margin-bottom: 48px;
+  .title {
+    font-size: 1.5rem;
+  }
+  .date {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.9rem;
+  }
+}
+.pagination {
+  margin: 0px;
+}
+
+// archive
+.page-title {
+  font-size: 1.5rem;
 }
 
 // footer

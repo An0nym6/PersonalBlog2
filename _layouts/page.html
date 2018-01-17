@@ -2,11 +2,50 @@
 layout: default
 ---
 
-<article>
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-  <div>
-    {{ content }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 padding-top">
+      {{ content }}
+    </div>
+    <div class="col-md-4 padding-top">
+      <div class="card">
+        <div class="card-header card-title">
+          标签
+        </div>
+        <div class="card-body">
+          {% assign max_tag_count = 0 %}
+          {% for tag in site.tags %}
+            {% if tag[1].size > max_tag_count %}
+              {% assign max_tag_count = tag[1].size %}
+            {% endif %}
+          {% endfor %}
+          {% for i in (1..max_tag_count) reversed %}
+            {% for tag in site.tags %}
+              {% if tag[1].size == i %}
+                <div class="chip">
+                  <a class="tag" href="/archives/tag/{{ tag[0] }}">{{ tag[0] }}</a>
+                  <span class="count" style="background-color: hsl(208, 80%, {{ tag[1].size | times: -18 | divided_by: max_tag_count | plus: 60}}%);">{{ tag[1].size }}</span>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card new-essays">
+        <div class="card-header card-title">
+          最新文章
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for post in site.posts %}
+              {% if forloop.index < 10 %}
+                <li class="list-group-item">
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
   </div>
-</article>
+</div>
+  
