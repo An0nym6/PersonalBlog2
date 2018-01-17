@@ -1,0 +1,33 @@
+.divider {
+  margin-top: 48px;
+  border-top: 1px solid #e9ecef;
+  height: 1px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 10px auto;
+}
+
+.add-comment {
+  font-size: 1rem;
+  color: #828282;
+  margin: 10px auto;
+}
+
+.comment {
+  display: block;
+
+  .commentgravatar{
+    display: inline-block;
+  }
+
+  .commentuser {
+    margin: 0 10px;
+    font-size: 1.0rem
+  }
+
+  .commentdate{
+    font-size: 0.9rem;
+  }
+}
