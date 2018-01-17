@@ -75,6 +75,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 128px;
+  color: #828282;
   .container {
     height: 100%;
     .divider {
@@ -84,28 +85,18 @@ footer {
     }
     .footer-content {
       padding-top: 48px;
-      color: #586069;
-      font-size: 12px;
-
+      font-size: 0.9rem;
       .col-middle {
         text-align: center;
         margin: 0 auto;
-
-        .github-info {
-          font-size: 0.9rem;
-          .icon-github{
-            vertical-align: middle;
-            text-decoration: none;
-          }
-        }
       }
-
       .col-right {
         text-align: right;
       }
       .icon {
-        font-size: 1.2rem;
         color: #828282;
+        font-size: 1.2rem;
+        padding-right: 4px;
       }
     }
   }
