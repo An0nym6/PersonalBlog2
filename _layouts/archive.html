@@ -9,5 +9,13 @@ layout: page
 
 <div class="page-title">归档</div>
 {% for post in posts %}
-  {{post.title}}
+  {% capture first %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture second %}{{ post.previous.date | date: '%Y' }}{% endcapture %}
+  {% if forloop.first %}
+    <div class="post-title">{{ first }}</div>
+  {% endif %}
+  {% if first != second %}
+    <div class="post-title">{{ second }}</div>
+  {% endif %}
+  <div class="post-title">{{ post.title }}</div>
 {% endfor %}

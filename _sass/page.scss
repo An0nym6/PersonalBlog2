@@ -1,0 +1,32 @@
+// page
+
+.chip {
+  line-height: 32px;
+  padding-left: 16px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.09);
+  display: inline-block;
+  margin: 0px 8px 16px 0px;
+
+  .tag {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .count {
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    display: inline-block;
+    color: #ffffff;
+  }
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.new-essays {
+  margin-top: 32px;
+}

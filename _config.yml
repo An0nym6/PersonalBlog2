@@ -14,6 +14,8 @@ jekyll-archives:
   layout: 'archive'
   permalinks:
     tag: '/archives/tag/:name/'
+sass:
+  sass_dir: _sass
 plugins:
   - jekyll-feed
   - jekyll-paginate
