@@ -6,7 +6,7 @@ baseurl: ""
 url: ""  # 发布时应更改
 github_username:  An0nym6
 markdown: kramdown
-paginate: 1
+paginate: 5
 paginate_path: "/page:num/"
 jekyll-archives:
   enabled: 

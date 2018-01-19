@@ -4,7 +4,17 @@
   font-size: 1.5rem;
 }
 
-.post-title {
+.year {
   font-size: 1.2rem;
   padding-top: 16px;
+  span {
+    padding-left: 8px;
+  }
+}
+
+.post-title {
+  padding-top: 16px;
+  a {
+    padding-left: 8px;
+  }
 }

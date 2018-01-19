@@ -8,14 +8,25 @@ layout: page
 {% endif %}
 
 <div class="page-title">归档</div>
+{% assign prev = '' %}
 {% for post in posts %}
-  {% capture first %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% capture second %}{{ post.previous.date | date: '%Y' }}{% endcapture %}
   {% if forloop.first %}
-    <div class="post-title">{{ first }}</div>
+    {% capture prev %}{{ post.date | date: '%Y' }}{% endcapture %}
+    <div class="year">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <span>{{ prev }}</span>
+    </div>
   {% endif %}
-  {% if first != second %}
-    <div class="post-title">{{ second }}</div>
+  {% capture this %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if this != prev %}
+    {% assign prev = this %}
+    <div class="year">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <span>{{ this }}</span>
+    </div>
   {% endif %}
-  <div class="post-title">{{ post.title }}</div>
+  <div class="post-title">
+    <span class="badge badge-secondary">{{ post.date | date: '%m-%d' }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </div>
 {% endfor %}
