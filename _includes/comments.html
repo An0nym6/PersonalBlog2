@@ -2,7 +2,7 @@
   <div class="divider"></div>
   <div class="title">评论</div>
   <div class="add-comment">
-    访问<a href="https://github.com/BeaverTeam/BeaverMovie/issues/{{page.commentIssueId}}"> this post's issue page on GitHub</a>，在 issue 中添加评论。
+    访问<a href="https://github.com/BeaverTeam/BeaverMovie/issues/{{page.commentIssueId}}?#new_comment_field"> this post's issue page on GitHub</a>，在 issue 中添加评论。
   </div>
   <div id="comments"></div>
 </div>
@@ -14,7 +14,7 @@
     for (var i=0; i<data.length; i++) {
       var cuser = data[i].user.login;
       var cuserlink = "https://www.github.com/" + data[i].user.login;
-      var clink = "https://github.com/BeaverTeam/BeaverMovie/issues/{{page.commentIssueId}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+      var clink = "https://github.com/BeaverTeam/BeaverMovie/issues/{{page.commentIssueId}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1 + "?#new_comment_field");
       var cbody = data[i].body_html;
       var cavatarlink = data[i].user.avatar_url;
       var cdate = Date.parse(data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
