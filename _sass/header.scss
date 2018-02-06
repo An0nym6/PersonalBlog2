@@ -4,8 +4,18 @@
   width: 48px;
   height: 48px;
 }
+
+.header-title {
+  padding-left: 8px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.2em;
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+  vertical-align: top;
+}
   
 main {
-  padding-top: 32px;
+  padding-top: 8px;
   padding-bottom: 128px;
 }

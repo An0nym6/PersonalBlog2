@@ -27,6 +27,13 @@
   font-size: 1.5rem;
 }
 
+.tags {
+  margin-top: 10px;
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+
 .new-essays {
   margin-top: 32px;
 }
