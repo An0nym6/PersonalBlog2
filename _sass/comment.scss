@@ -11,29 +11,14 @@
   margin: 10px auto;
 }
 
-.add-comment {
-  font-size: 1rem;
-  color: #828282;
-  margin: 10px auto;
+.power {
+  display: none;
 }
 
-#comments {
-  padding-bottom: 32px;
+.col-60 {
+  padding-left: 0px;
 }
 
-.comment {
-  display: block;
-
-  .commentgravatar{
-    display: inline-block;
-  }
-
-  .commentuser {
-    margin: 0 10px;
-    font-size: 1.0rem
-  }
-
-  .commentdate{
-    font-size: 0.9rem;
-  }
+textarea {
+  resize: none !important;
 }
