@@ -4,20 +4,11 @@ layout: page
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    <h1 itemprop="name headline">{{ page.title }}</h1>
-    <p>
-      <time datetime="{{ page.date }}" itemprop="datePublished">
-        {{ page.date }}
-      </time>
-      {% if page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span itemprop="name">{{ page.author }}</span>
-        </span>
-      {% endif %}
-    </p>
+    <div class="title" itemprop="name headline">{{ page.title }}</div>
+    <div class="date" itemprop="datePublished">{{ page.date | date: '%Y 年 %m 月 %d 日' }}</div>
   </header>
 
-  <div itemprop="articleBody">
+  <div class="padding-top" itemprop="articleBody">
     {{ content }}
   </div>
   <!-- 引入评论系统 -->

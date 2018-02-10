@@ -1,7 +1,11 @@
 // post
 
-@media (max-width: 576px) {
-  article h1 {
-    font-size: 2rem;
-  }
+.title {
+  font-size: 1.5rem;
+  margin: 10px auto;
+}
+
+.date {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.9rem;
 }
