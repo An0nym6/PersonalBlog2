@@ -1,16 +1,14 @@
 <div>
   <div class="divider"></div>
-  <div class="title">评论</div>
+  <div class="comment-title">评论</div>
   <div id="comment"></div>
 </div>
 
 <script>
-    new Valine({
-        el:'#comment',
-        notify:false,
-        verify:false,
-        placeholder: '添加评论',
-        path:'/',
-        avatar:'mm'
-    })
+  new Valine({
+    el: '#comment',
+    appId: '',
+    appKey: '',
+    placeholder: '添加评论',
+  })
 </script>
